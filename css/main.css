@@ -1,17 +1,18 @@
+:root {
+    --bkgBlueLight: rgba(131, 181, 233, 1);
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 1.1rem;
     line-height: 1.5;
+    transition: background-color 900ms ease-in-out;
 }
 
-header svg {
-    color: #353D44;
-    fill: #fdfdfd;
-    cursor: pointer;
-}
-
-/* Dark Mode */
+/****************** 
+    Dark Mode 
+*******************/
 .darkmode {
     background-color: #353D44;
     color: #fdfdfd;
@@ -52,13 +53,10 @@ header svg {
     fill: #feef88;
     cursor: pointer;
 }
-/* End Dark Mode */
+/****************** 
+    Dark Mode End
+*******************/
 
-
-main {
-    padding: 0 .6rem;
-    margin-bottom: 1.4rem;
-}
 
 h1,
 h2,
@@ -72,21 +70,119 @@ h4 {
     font-size: 1.2rem;
     margin: .6rem 0 .2rem 0;
 }
-
+/* NEW NAV */
 header {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    align-items: center;
     padding: 1rem .4rem;
+    background-color: var(--bkgBlueLight);
     text-align: center;
-    background-color: #83b5e9;
+    position: fixed;
+    width: 100%;
+    padding-right: 1rem;
+    z-index: 999;
+    transition: background-color 900ms ease-in-out;
 }
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background-color: var(--bkgBlueLight);
+    width: 100%;
+    height: 100vh;
+    /* display: none; */
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-out;
+}
+nav a:hover {
+    color: peru;
+}
+.nav-toggle {
+    display: none;
+}
+.nav-toggle-lable {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1rem;
+    /* border: 1px solid red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-toggle-lable span,
+.nav-toggle-lable span::before,
+.nav-toggle-lable span::after {
+    display: block;
+    background: white;
+    height: 4px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+.nav-toggle-lable span::before,
+.nav-toggle-lable span::after {
+    content: '';
+    position: absolute;
+}
+.nav-toggle-lable span::before {
+    bottom: 7px;
+}
+.nav-toggle-lable span::after {
+    top: 7px;
+}
+
+.nav-toggle:checked ~ nav {
+    /* display: block; */
+    transform: scale(1, 1);
+}
+.nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+
+/* NEW NAVE END */
+
 header aside {
     margin-top: 1rem;
 }
 
 header h1 {
-    font-size: 1.6rem;
+    font-size: 2rem;
     line-height: 1.5rem;
     color: white;
     text-align: center;
+}
+header svg {
+    color: #353D44;
+    fill: #fdfdfd;
+    cursor: pointer;
+}
+
+main {
+    padding: 100px .6rem;
+    margin-bottom: 1.4rem;
 }
 
 .title {
@@ -312,11 +408,11 @@ br {
 
 @media (min-width: 768px) {
     
-    header {
+    /* header {
         display: grid;
         grid-template-columns: 95% 1fr;
         place-items: center;
-    }
+    } */
 
     .project {
         display: grid;
