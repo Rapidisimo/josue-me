@@ -1,5 +1,8 @@
 :root {
     --bkgBlueLight: rgba(131, 181, 233, 1);
+    --bkgBlueDark: rgba(85, 116, 148, 1);
+    --txtWhiteDark: rgb(253, 253, 253);
+    --sun: rgb(238, 232, 124);
 }
 
 body {
@@ -10,38 +13,40 @@ body {
     transition: background-color 900ms ease-in-out;
 }
 
+
 /****************** 
     Dark Mode 
 *******************/
 .darkmode {
     background-color: #353D44;
-    color: #fdfdfd;
+    color: var(--txtWhiteDark);
 }
 .darkmode h1,
 .darkmode h2,
 .darkmode h3,
 .darkmode h4 {
-    color: #fdfdfd;
+    color: var(--txtWhiteDark);
 }
 .darkmode a {
-    color: #fdfdfd;
+    color: var(--txtWhiteDark);
 }
 .darkmode a:visited {
-    color: #fdfdfd;
+    color: var(--txtWhiteDark);
 }
 .darkmode .project-source a {
-    background-color: rgb(85, 116, 148);
+    background-color: var(--bkgBlueDark);
 }
 .darkmode .linkedin svg,
 .darkmode .email svg,
 .darkmode .twitter svg,
 .darkmode .instagram svg {
-    fill: #fdfdfd;
+    fill: var(--txtWhiteDark);
 }
 .darkmode header {
-    background-color: rgb(85, 116, 148);
+    background-color: var(--bkgBlueDark);
 }
-.darkmode .project-pic {
+.darkmode .project-pic,
+.darkmode .design-pic {
     filter: brightness(0.90);
 }
 .darkmode .profile-photo {
@@ -49,8 +54,8 @@ body {
 }
 
 .darkmode header svg {
-    color: #eee87c;
-    fill: #feef88;
+    color: var(--sun);
+    fill: var(--sun);
     cursor: pointer;
 }
 /****************** 
@@ -58,20 +63,9 @@ body {
 *******************/
 
 
-
-h1,
-h2,
-h3 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 400;
-}
-h4 {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
-    margin: .6rem 0 .2rem 0;
-}
-/* NEW NAV */
+/****************** 
+    Navigation
+*******************/
 header {
     display: flex;
     justify-content: flex-end;
@@ -93,8 +87,6 @@ nav {
     left: 0;
     background-color: var(--bkgBlueLight);
     width: 100%;
-    height: 100vh;
-    /* display: none; */
     transform: scale(1, 0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
@@ -117,16 +109,16 @@ nav a {
     display: block;
 }
 nav a,
+header a:visited,
 nav a:visited {
     color: white;
 }
 
-/* nav a:hover {
-    color: peru;
-} */
+
 .nav-toggle {
     display: none;
 }
+
 .nav-toggle-lable {
     position: absolute;
     top: 0;
@@ -160,7 +152,7 @@ nav a:visited {
 }
 
 .nav-toggle:checked ~ nav {
-    /* display: block; */
+    display: block;
     transform: scale(1, 1);
 }
 .nav-toggle:checked ~ nav a {
@@ -168,57 +160,67 @@ nav a:visited {
     transition: opacity 250ms ease-in-out 250ms;
 }
 
-/* NEW NAVE END */
+    /* Anchor Link Spacing */
+    #dev::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -80px; 
+        height: 80px; 
+        visibility: hidden; 
+        pointer-events: none;
+      }
+      #design::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -80px; 
+        height: 80px; 
+        visibility: hidden; 
+        pointer-events: none;
+      }
+      #cc::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -80px; 
+        height: 120px; 
+        visibility: hidden; 
+        pointer-events: none;
+      }
+      #contact::before { 
+        display: block; 
+        content: " "; 
+        margin-top: -80px; 
+        height: 80px; 
+        visibility: hidden; 
+        pointer-events: none;
+      }
 
-header aside {
-    margin-top: 1rem;
-}
+    /* End Anchor Link Spacing */
 
-header h1 {
-    font-size: 2rem;
-    line-height: 1.5rem;
-    color: white;
-    text-align: center;
-}
-header svg {
-    color: #353D44;
-    fill: #fdfdfd;
-    cursor: pointer;
-}
 
-main {
-    padding: 100px .6rem;
-    margin-bottom: 1.4rem;
-}
+/****************** 
+    Navigation End
+*******************/
 
-.title {
-    text-align: center;
+/****************** 
+    General Items
+*******************/
+h1,
+h2,
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+h4 {
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-    padding: 0 0 1rem 0;
+    font-size: 1.2rem;
+    margin: .6rem 0 .2rem 0;
 }
 
-.profile-photo {
-    shape-outside: circle(45%);
-    border-radius: 50%;
-    max-width: 10rem;
-    margin-right: .6rem;
-    padding: .4rem;
-    float: left;
+img {
+    max-width: 100%;
 }
 
-.intro {
-    text-align: center;
-    padding: .4rem;
-}
-
-.intro h3 {
-    margin: .6rem;
-}
-.intro a {
-    font-size: 1.3em;
-}
 a {
     text-decoration: none;
     color: black;
@@ -226,20 +228,57 @@ a {
 a:visited {
     color: black;
 }
+h1 a,
+h1 a:visited {
+    color: white;
+}
 .underlined {
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-color: #86bdec;
+    text-decoration-color: rgb(134, 189, 236);
     text-decoration-thickness: 1px;
     color: black;
   }
   a:hover {
-    text-decoration-color: #df8a62;
+    text-decoration-color: rgb(223, 138, 98);
     text-decoration: underline;
     text-decoration-style: wavy;
     text-decoration-thickness: 1px;
-
   }
+
+
+
+header h1 {
+    font-size: 2rem;
+    line-height: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+/* Moon SVG */
+header svg {
+    color: #353D44;
+    fill: var(--txtWhiteDark);
+    cursor: pointer;
+}
+
+main {
+    padding: 6.25rem .6rem;
+    margin-bottom: 1.4rem;
+}
+
+.intro {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    margin-bottom: 1.8rem;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    max-width: 10rem;
+}
 
 .section-heading {
       margin: 2rem 0;
@@ -247,69 +286,65 @@ a:visited {
   
 .section-heading,
 .project-name {
-    text-align: center;
+    text-align: left;
 }
 
-  .projects {
+.projects {
     margin-top: 4rem;
   }
 
-  .project {
+.project {
     margin: 1rem auto;
     border-bottom: 1px dashed rgb(194, 211, 229);
   }
-  .project h3 {
+
+.project h3 {
     padding: .4rem .4rem .4rem .2rem;
   }
 
-  .project-pic {
+.project-pic {
     width: 100%;
     border: 2px solid rgb(194, 211, 229);
     border-radius: 5px;
     display: block;
   }
 
-  figcaption {
+figcaption {
     font-size: .9rem;
     text-align: center;
   }
 
-  .project-description {
-    margin: .6rem;
-    /* padding: 0 .2rem; */
-  }
-
-  .project-source {
+.project-source {
     padding: .4rem;
     margin: 1.4rem 0;
     display: flex;
     justify-content: space-evenly;
     gap: 1rem;
   }
-  .project-source a {
+.project-source a {
     color: white;
     font-weight: 700;
-    background-color: #86bdec;
+    background-color: rgb(134, 189, 236);
     border-radius: 5px;
     padding: .4rem .6rem;
     flex-grow: 1;
   }
-  .project-source a:hover {
+.project-source a:hover {
     text-decoration: none;
     color: white;
-    background-color: #5d84a6;
+    background-color: rgb(93, 132, 166);
   }
-  .project-description,
-  .project-source {
+
+.project-source {
     text-align: center;
   }
 
-  .contact h2,
-  .contact h3 {
+.contact h2,
+.contact h3 {
     text-align: center;
   }
 
-  .contact-info {
+.contact-info {
     margin: 1rem auto;
     list-style: none;
     display: grid;
@@ -392,11 +427,12 @@ br {
 }
 .project-name {
     grid-area: row1;
-    text-align: center;
+    /* text-align: center; */
 }
 .project-description {
     grid-area: row2;
-    text-align: center;
+    margin: .6rem;
+    text-align: left;
 }
 .project-source {
     grid-area: row4;
@@ -412,6 +448,31 @@ br {
 .photography {
     margin-top: 1.4rem;
 }
+
+
+/****************** 
+    About Page
+*******************/
+.about {
+    /* padding: 0 .4rem; */
+}
+.about h1 {
+    margin-bottom: .6rem;
+}
+.about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.me2 {
+    max-width: 95vw;
+}
+
+/****************** 
+About Page End
+*******************/
+
 
 @media (min-width: 770px) {
     
@@ -483,26 +544,37 @@ br {
     }
     .intro {
         display: grid;
+        text-align: left;
         grid-template-columns: 25% 1fr;
-        grid-template-rows: repeat(3, 1fr);
     }
     .intro img {
         grid-row: 1 / span 2;
-        place-self: center;
+        /* place-self: center; */
     }
+    .profile-photo {
+        /* shape-outside: circle(45%);
+        border-radius: 50%; */
+        max-width: 80%;
+        /* margin-right: .6rem;
+        padding: .4rem;
+        float: left; */
+    }    
     .intro h2 {
-        font-size: 1.8rem;
-        place-self: center;
+        font-size: 3rem;
+        /* place-self: center; */
+        text-align: left;
     }
     .intro p {
         font-size: 1.2rem;
     }
-    .intro h4 {
+    /* .intro h4 {
         grid-column: 2 / 2;
         place-self: center;
-    }
+    } */
     .section-heading {
         font-size: 1.8rem;
+        text-align: left;
+        margin-bottom: 0;
     }
     .project-name {
         font-size: 1.4rem;
@@ -563,14 +635,67 @@ br {
         max-width: 1024px;
         margin: 0 auto;
     }
-    .intro p {
-        font-size: 1.4rem;
+    .intro {
+        /* border: 1px solid rgba(134, 188, 236, 0.368); */
+        /* border-radius: 10px; */
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        align-items: center;
     }
-    .intro h4 {
-        font-size: 1.4rem;
+    .intro img {
+        max-width: 20%;
+    }
+    .intro p {
+        font-size: 2rem;
+        line-height: 1.8;
+        /* grid-row: 1 / 3; */
+    }
+    .intro h2 {
+        font-size: 3.4rem;
     }
     nav a {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
+    
+    .design-projects {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.2rem;
+        margin: 2rem 0;
+    }
+    .design-projects h2 {
+        grid-column: 1 / 4;
+    }
+    .blank {
+        opacity: .5;
+    }
+
+/****************** 
+    About Page
+*******************/
+    .about {
+        margin-top: 3rem;
+        padding: 0 6rem 0 6.4rem;
+    }
+    .about h1 {
+        margin-bottom: 1rem;
+    }
+    .about p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+    }
+    .me2 {
+        max-width: 300px;
+        shape-outside: border-box;
+        float: left;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+    }
+/****************** 
+    About Page End
+*******************/
 }
+

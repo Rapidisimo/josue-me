@@ -1,8 +1,31 @@
+// Nav Elements
+const development = document.getElementById('development');
+const design = document.getElementById('uidesign');
+const ccreation = document.getElementById('ccreation');
 const connect = document.getElementById('connect');
 const toplink = document.getElementById('backToTop');
+// Darkmode Elements
 const darkmodeTheme = document.getElementById('darkmode');
 const siteBody = document.querySelector('body');
 
+// Smooth Scrolling for Nav
+development.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector('.projects').focus();
+    document.getElementById('dev').scrollIntoView({ behavior: 'smooth' });
+});
+
+design.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector('.designs').focus();
+    document.getElementById('design').scrollIntoView({ behavior: 'smooth' });
+});
+
+ccreation.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector('.other-work').focus();
+    document.getElementById('cc').scrollIntoView({ behavior: 'smooth' });
+});
 
 connect.addEventListener('click', e => {
     e.preventDefault();
@@ -16,6 +39,7 @@ toplink.addEventListener('click', e => {
     document.getElementById('top').scrollIntoView({ behavior: 'smooth' });
 });
 
+// Darkmode Switching Functionality
 darkmodeTheme.addEventListener('click', e => {
     if (siteBody.className === '') {
         siteBody.className = 'darkmode';
@@ -38,3 +62,17 @@ darkmodeTheme.addEventListener('click', e => {
 `;
     }
 });
+
+// Closes the Nav when clicking on an item on mobile view
+const nav = document.querySelector('UL');
+const home = document.querySelector('#jr');
+
+nav.addEventListener('click', () => {
+    let checkbox = document.querySelector('.nav-toggle');
+    checkbox.checked = false;
+})
+
+home.addEventListener('click', () => {
+    let checkbox = document.querySelector('.nav-toggle');
+    checkbox.checked = false;
+})

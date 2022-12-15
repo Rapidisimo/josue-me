@@ -21,22 +21,22 @@
         gtag('js', new Date());
         gtag('config', 'G-5XGE4Z1YXC');
         </script>
-        <body>
-        <header id="top" class="logo">
+        <body id="top">
+        <header class="logo">
             <input type="checkbox" id="nav-toggle" class="nav-toggle">
-            <nav>
+            <nav id="navigation">
                 <ul>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Front-end</a></li>
-                    <li><a href="#">Design</a></li>
-                    <li><a href="#">Other Work</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#dev" id="development">Development</a></li>
+                    <li><a href="#design" id="uidesign">Design</a></li>
+                    <li><a href="#cc" id="ccreation">Content Creation</a></li>
+                    <li><a href="#contact" id="connect">Contact</a></li>
                 </ul>
             </nav>
             <label for="nav-toggle" class="nav-toggle-lable">
                 <span></span>
             </label>
-            <h1>JR</h1>
+            <h1><a href="#top" id="jr">JR</a></h1>
             <a href="#" id="darkmode">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon-stars" width="34" height="34" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -49,24 +49,15 @@
         <main>
             <section class="intro" id="about">
                 <img src="img/profile-sm.jpg" alt="Photo of Josue" class="profile-photo">
-                <h2 class="title">Creatively coding websites</h2>
-                <p>Hello! I'm Josu&eacute; Rodriguez, a front-end developer. I love to approach things with both creativity and logic, but most of all, with an open mind.</p>
-                <h4><a class="underlined"  id="connect" href="#contact">Contact Me!</a></h4>
+                <section>
+                    <h2>Hello! I'm Josu&eacute; Rodriguez.</h2>
+                    <p>A Front-End Developer</p>
+                </section>
             </section>
-            <section class="projects">
-                <h2 class="section-heading">Recent Coding Projects Using HTML CSS and JavaScript</h2>
 
-                <div class="project">
-                    <h3 class="project-name"><a href="https://rapidisimo.github.io/Project-5-Photo-Gallery/" target="_blank" >Photo Gallery</a></h3>
-                    <p class="project-description">For this project, I had to create an interactive photo gallery. I took the opportunity to use my own photography work. This was great because I combined two things I enjoy– photography and coding! I went the extra step to make all the photos searchable in order to make them easier to find.</p>
-                    <p class="project-source"><a href="https://rapidisimo.github.io/Project-5-Photo-Gallery/" target="_blank" >Live Version</a> <a  href="https://github.com/Rapidisimo/Project-5-Photo-Gallery" target="_blank">GitHub</a></p>
-                    <a class="project-preview" href="https://rapidisimo.github.io/Project-5-Photo-Gallery/" target="_blank">
-                        <picture>
-                            <source srcset="img/project-5-lg.jpg" media="(min-width: 1024px)">
-                            <img src="img/project-5.jpg" alt="website screenshot" class="project-pic">
-                        </picture>
-                    </a>
-                </div>
+            <section class="projects" id="dev">
+                <h2 class="section-heading">Coding Projects Using HTML CSS and JavaScript</h2>
+                <p>For more of my coding projects, please visit my <a href="https://github.com/rapidisimo" target="_blank" class="underlined">GitHub</a> page.</p>
 
                 <div class="project">
                     <h3 class="project-name"><a href="https://rapidisimo.github.io/Project-6-GameShowApp/" target="_blank">Gameshow App</a></h3>
@@ -103,22 +94,55 @@
                         </picture>
                     </a>
                 </div>
-
-                <div class="project">
-                    <h3 class="project-name"><a href="https://rapidisimo.github.io/Project-4-Web-Style-Guide/" target="_blank" >Web Style Guide</a></h3>
-                    <p class="project-description">Using a preprocessor scripting language, like <a href="https://sass-lang.com/" target="_blank" class="underlined">Sass.</a>, can be beneficial to a web development project, making it more efficient and powerful. In this instance, I had to take an existing project and convert its CSS into Sass. Implementing Sass allowed me to be more efficient and avoid repeated code throughout the project. I split the code into partial files to be better organized. In the future, it could be used as a micro-framework to prototype other websites.</p>
-                    <p class="project-source"><a href="https://rapidisimo.github.io/Project-4-Web-Style-Guide/" target="_blank" >Live Version</a> <a  href="https://github.com/Rapidisimo/Project-4-Web-Style-Guide" target="_blank">GitHub</a></p>
-                    <a class="project-preview" href="https://rapidisimo.github.io/Project-4-Web-Style-Guide/" target="_blank">
-                        <picture>
-                            <source srcset="img/project-4-lg.jpg" media="(min-width: 1024px)">
-                            <img src="img/project-4.jpg" alt="website screenshot" class="project-pic">
-                        </picture>
-                    </a>
-                </div>
-                
+              
             </section>
-            <section class="other-work">
-                <h2 class="section-heading">Other Work</h2>
+
+            <section id="design" class="designs">
+                <h2 class="section-heading">Design Work</h2>
+                <p>I will be updating this section with more work.</p>
+
+                <section class="design-projects">
+                    <h2>Print - Samples</h2>
+                    <div class="design-project">
+                        <h3 class="project-name">Photo Gallery Event Mailer</h3>
+                        <a href="img/print/gallery_invitation.jpg" target="_blank"><img src="img/print/gallery_invitation.jpg" alt="gallery mailer" class="design-pic"></a>
+                    </div>
+
+                    <div class="design-project">
+                        <h3 class="project-name">Company Stationary</h3>
+                        <a href="img/print/revo.jpg" target="_blank"><img src="img/print/revo.jpg" alt="stationry" class="design-pic"></a>
+                    </div>
+
+                    <div class="design-project">
+                        <h3 class="project-name">Book Cover</h3>
+                        <a href="img/print/book.jpg" target="_blank"><img src="img/print/book.jpg" alt="book" class="design-pic"></a>
+                    </div>
+                </section>
+
+                <section class="design-projects">
+                    <h2>Web Design</h2>
+                    <div class="design-project">
+                        <h3 class="project-name">Coming Soon</h3>
+                        <a href="#"><img src="img/print/blank.jpg" alt="" class="design-pic blank"></a>
+                    </div>
+
+                    <div class="design-project">
+                        <h3 class="project-name">Coming Soon</h3>
+                        <a href="#"><img src="img/print/blank.jpg" alt="" class="design-pic blank"></a>
+                    </div>
+
+                    <div class="design-project">
+                        <h3 class="project-name">Coming Soon</h3>
+                        <a href="#"><img src="img/print/blank.jpg" alt="" class="design-pic blank"></a>
+                    </div>
+                </section>
+
+
+
+            </section>
+
+            <section class="other-work" id="cc">
+                <h2 class="section-heading">Content Creation</h2>
                 <section class="youtube">
                     <h3>YouTube</h3>
                     <p>Through my <a  href="https://youtube.com/foodtechlife" target="_blank" class="underlined">YouTube Channel</a>, I enjoy making <a href="https://foodtechlife.com" target="_blank" class="underlined">food recipes</a> and tech videos. This allows me to learn more about lighting, videography, audio and the editing that comes with it. Take a look at one of my videos below and if you like a video, let me know!</p>
@@ -197,7 +221,7 @@
                 <section class="message">
                     <h3>Message Me</h3>
                     <form name="contact" class="message-form" method="post" data-netlify="true" autocomplete="off">
-                        <textarea class="form-area" name="msg-area" id="user-msg" cols="26" rows="5" placeholder="Message me" required></textarea>
+                        <textarea class="form-area" name="msg-area" id="user-msg" cols="26" rows="5" placeholder="Message me and please include your contact info." required></textarea>
                         <button type="submit" class="button-send">SEND</button>
                     </form>
                 </section>       
