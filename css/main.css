@@ -10,7 +10,7 @@ body {
     font-weight: 300;
     font-size: 1.1rem;
     line-height: 1.5;
-    transition: background-color 900ms ease-in-out;
+    /* transition: background-color 900ms ease-in-out; */
 }
 
 
@@ -78,7 +78,7 @@ header {
     width: 100%;
     padding-right: 1rem;
     z-index: 999;
-    transition: background-color 900ms ease-in-out;
+    /* transition: background-color 900ms ease-in-out; */
 }
 nav {
     position: absolute;
@@ -89,7 +89,7 @@ nav {
     width: 100%;
     transform: scale(1, 0);
     transform-origin: top;
-    transition: transform 400ms ease-in-out;
+    /* transition: transform 400ms ease-in-out; */
 }
 nav ul {
     margin: 0;
@@ -105,7 +105,7 @@ nav a {
     font-weight: 700;
     text-transform: uppercase;
     opacity: 0;
-    transition: opacity 150ms ease-out;
+    /* transition: opacity 150ms ease-out; */
     display: block;
 }
 nav a,
@@ -157,7 +157,7 @@ nav a:visited {
 }
 .nav-toggle:checked ~ nav a {
     opacity: 1;
-    transition: opacity 250ms ease-in-out 250ms;
+    /* transition: opacity 250ms ease-in-out 250ms; */
 }
 
     /* Anchor Link Spacing */
