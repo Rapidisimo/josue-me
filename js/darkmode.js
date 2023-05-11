@@ -6,6 +6,7 @@ function checkLocalStorage() {
     if(localStorage.getItem('Theme') === 'lightMode') {
         console.log('Light theme is stored');
         colorMode = 'lightMode';
+        themeSwitcher(false);
     }else if(localStorage.getItem('Theme') === 'darkMode') {
         console.log('Dark theme is stored');
         colorMode = 'darkMode';
