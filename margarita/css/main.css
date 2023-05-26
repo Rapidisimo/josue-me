@@ -1,0 +1,45 @@
+@import url(reset.css);
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 0 1.2rem;
+}
+
+header h1 {
+    font-size: 1.4rem;
+}
+
+header,
+main {
+    margin-top: 1.2rem;
+}
+
+header {
+    text-align: center;
+}
+
+main h2 {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    font-size: 1.2rem;
+}
+
+input {
+    padding: .4rem;
+    margin-left: 1.2rem;
+    font-size: 1.1rem;
+    width: 5rem;
+}
+
+ul li {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
