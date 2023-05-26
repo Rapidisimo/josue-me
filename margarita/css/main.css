@@ -43,3 +43,7 @@ ul li {
     line-height: 1.8;
     font-size: 1.1rem;
 }
+
+img {
+    margin: 0 auto;
+}

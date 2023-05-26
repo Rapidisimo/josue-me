@@ -16,7 +16,9 @@
             <h1>Whole Fruit Fozen Margarita</h1>
         </header>
         <main>
-            <img src="images/margarita.jpg" alt="cocktail on a cutting board">
+            <img srcset="images/margarita.jpg 600w, images/margarita2.jpg 250w"
+                sizes="(max-width: 400px) 250px, 600px"
+            >
             <h2>Recipe</h2>
             <section class="ingredients">
                 <label for="servings">Number of servings:</label>
@@ -32,6 +34,9 @@
                 </ul>    
             </section>
         </main>
+        <footer>
+            <a href="https://www.vitamix.com/us/en_us/recipes/whole-fruit-margarita" target="_blank">Source</a>
+        </footer>
     </div>
     <script src="index.js"></script>
 </body>
