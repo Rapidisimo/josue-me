@@ -16,9 +16,9 @@ const ingredientList = document.getElementById('ingredient-list')
 function ingredientQuantities () {
     const tequilaVol = (servings.value * 45 / 29.574).toFixed(1);
     const oLiqueurVol = (servings.value * 30 / 29.574).toFixed(1);
-    let orange = .25;
-    let lime = .25;
-    let lemon = .25;
+    let orange = .25 * servings.value;
+    let lime = .25 * servings.value;
+    let lemon = .25 * servings.value;
     const syrup = (servings.value * 30 / 29.574).toFixed(1);
     const iceCubes = (servings.value * 195).toFixed(1)
     ingredientList.innerHTML = `
