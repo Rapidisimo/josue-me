@@ -234,16 +234,14 @@ h1 a:visited {
 }
 .underlined {
     text-decoration: underline;
-    text-decoration-style: wavy;
     text-decoration-color: rgb(134, 189, 236);
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
     color: black;
   }
   a:hover {
     text-decoration-color: rgb(223, 138, 98);
     text-decoration: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: 1px;
+    text-decoration-thickness: 2px;
   }
 
 
