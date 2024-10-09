@@ -66,6 +66,10 @@ body {
 /****************** 
     Navigation
 *******************/
+* {
+    scroll-behavior: smooth;
+}
+
 header {
     display: flex;
     justify-content: flex-end;
@@ -79,6 +83,11 @@ header {
     padding-right: 1rem;
     z-index: 999;
     /* transition: background-color 900ms ease-in-out; */
+}
+#jr {
+    font-size: 1.8rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
 }
 nav {
     position: absolute;
@@ -157,44 +166,11 @@ nav a:visited {
 }
 .nav-toggle:checked ~ nav a {
     opacity: 1;
-    /* transition: opacity 250ms ease-in-out 250ms; */
 }
 
-    /* Anchor Link Spacing */
-    #dev::before { 
-        display: block; 
-        content: " "; 
-        margin-top: -80px; 
-        height: 80px; 
-        visibility: hidden; 
-        pointer-events: none;
-      }
-      #design::before { 
-        display: block; 
-        content: " "; 
-        margin-top: -80px; 
-        height: 80px; 
-        visibility: hidden; 
-        pointer-events: none;
-      }
-      #cc::before { 
-        display: block; 
-        content: " "; 
-        margin-top: -80px; 
-        height: 120px; 
-        visibility: hidden; 
-        pointer-events: none;
-      }
-      #contact::before { 
-        display: block; 
-        content: " "; 
-        margin-top: -80px; 
-        height: 80px; 
-        visibility: hidden; 
-        pointer-events: none;
-      }
-
-    /* End Anchor Link Spacing */
+#dev {
+    scroll-margin-top: 6rem;
+}
 
 
 /****************** 
@@ -204,6 +180,18 @@ nav a:visited {
 /****************** 
     General Items
 *******************/
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }
+
 h1,
 h2,
 h3 {
@@ -228,6 +216,7 @@ a {
 a:visited {
     color: black;
 }
+
 h1 a,
 h1 a:visited {
     color: white;
@@ -326,7 +315,13 @@ figcaption {
     border-radius: 5px;
     padding: .4rem .6rem;
     flex-grow: 1;
+    display: inline-flex;
+    justify-content: center;
+    gap: .5em;
   }
+.project-source svg {
+    margin: 0;
+}
 .project-source a:hover {
     text-decoration: none;
     color: white;
@@ -425,7 +420,6 @@ br {
 }
 .project-name {
     grid-area: row1;
-    /* text-align: center; */
 }
 .project-description {
     grid-area: row2;
@@ -511,6 +505,10 @@ About Page End
         grid-column: 3;
     }
 
+    .projects h3 {
+        font-size: 1.6rem;
+    }
+
     .project {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -547,28 +545,17 @@ About Page End
     }
     .intro img {
         grid-row: 1 / span 2;
-        /* place-self: center; */
     }
     .profile-photo {
-        /* shape-outside: circle(45%);
-        border-radius: 50%; */
         max-width: 80%;
-        /* margin-right: .6rem;
-        padding: .4rem;
-        float: left; */
     }    
-    .intro h2 {
+    .intro h1 {
         font-size: 3rem;
-        /* place-self: center; */
         text-align: left;
     }
     .intro p {
         font-size: 1.2rem;
     }
-    /* .intro h4 {
-        grid-column: 2 / 2;
-        place-self: center;
-    } */
     .section-heading {
         font-size: 1.8rem;
         text-align: left;
@@ -601,8 +588,6 @@ About Page End
     }
     
     .contact {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
         margin-top: 4rem;
     }
     .contact h2 {
@@ -611,10 +596,8 @@ About Page End
     .contact-info {
         margin: 1rem auto;
         list-style: none;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        place-items: center;
+        display: flex;
+        justify-content: space-between;
       }    
     .project-pic:hover {
         opacity: .8;

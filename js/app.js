@@ -1,7 +1,7 @@
 import {colorMode, checkLocalStorage, themeSwitcher} from './darkmode.js'
 
 // Nav Elements
-const development = document.getElementById('development');
+// const development = document.getElementById('development');
 const design = document.getElementById('uidesign');
 const ccreation = document.getElementById('ccreation');
 const connect = document.getElementById('connect');
@@ -9,11 +9,11 @@ const toplink = document.getElementById('backToTop');
 const darkmodeTheme = document.getElementById('darkmode');
 
 // Smooth Scrolling for Nav
-development.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector('.projects').focus();
-    document.getElementById('dev').scrollIntoView({ behavior: 'smooth' });
-});
+// development.addEventListener('click', e => {
+//     e.preventDefault();
+//     document.querySelector('.projects').focus();
+//     document.getElementById('dev').scrollIntoView({ behavior: 'smooth' });
+// });
 
 design.addEventListener('click', e => {
     e.preventDefault();
